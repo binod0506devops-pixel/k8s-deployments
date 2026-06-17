@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: user-app-deployment
 spec:
-  replicas: 3  # Number of pod replicas
+  replicas: 3  # Number of pod replicastest
   selector:
     matchLabels:
       app: user-app
