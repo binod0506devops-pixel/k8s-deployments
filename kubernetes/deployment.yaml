@@ -1,20 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
-  name: nuvora-app-19-06-2026
+  name: nuvora-app-deployment
+  namespace: default
 
 spec:
-  replicas: 3  # Number of pod replicas
+  replicas: 3
+
   selector:
     matchLabels:
-      app: user-app
+      app: nuvora-app
+
   template:
     metadata:
       labels:
-        app: user-app
+        app: nuvora-app
+
     spec:
       containers:
-        - name: user-app
+        - name: nuvora-app-container
           image: binod0506/kubernetes-ci-cd-pipelinev2:db34519e12cbd445861fe877c884c5454f0d2334
           ports:
             - containerPort: 8081
