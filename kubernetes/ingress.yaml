@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: user-app-ingress
 spec:
+  ingressClassName: nginx
   rules:
     - host: user-app.local  # You can set a custom hostname
       http:
