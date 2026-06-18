@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: My-Application19-06-2026
+  name: nuvora-app-19-06-2026
+
 spec:
   replicas: 3  # Number of pod replicas
   selector:
