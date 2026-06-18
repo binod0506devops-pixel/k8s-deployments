@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: user-app-deployment
 spec:
-  replicas: 3  # Number of pod replicastest
+  replicas: 3  # Number of pod replicas
   selector:
     matchLabels:
       app: user-app
@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
         - name: user-app
-          image: binod0506/kubernetes-ci-cd-pipelinev2:067fa8ede978ff47fc2195e25f370a93fd64fdf8
-
+          image: binod0506/kubernetes-ci-cd-pipelinev2:latest
           ports:
             - containerPort: 8081
