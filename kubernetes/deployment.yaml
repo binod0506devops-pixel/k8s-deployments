@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: nuvora-app-deployment
+  name: engitronix-app-deployment
   namespace: default
 
 spec:
@@ -10,12 +10,12 @@ spec:
 
   selector:
     matchLabels:
-      app: nuvora-app
+      app: engitronix-app
 
   template:
     metadata:
       labels:
-        app: nuvora-app
+        app: engitronix-app
 
     spec:
       containers:
